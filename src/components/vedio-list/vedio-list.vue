@@ -5,7 +5,6 @@
       <div class="text">
         <div v-if="states === 'live'">
           <div class="desc">
-            <!-- <img class="icon" :src="livePng" alt /> -->
             <img class="icon" :src="item.live_state === 1 ? livePng : recPng" />
             <span>{{item.online_number}}人围观</span>
           </div>
@@ -17,7 +16,8 @@
             <span>{{item.online_number}}人围观</span>
           </div>
         </div>
-        <div class="graph" :style="{ 'background-image': `url(${item.coverpicture})`}"></div>
+        <div class="graph" v-lazy:background-image="item.coverpicture">
+        </div>
         <div class="platform">{{item.name}}</div>
       </div>
     </div>
@@ -71,12 +71,15 @@ export default {
     }
 
     .graph {
+      width: 100%;
       height: 0;
-      overflow: hidden;
-      height: 0;
-      padding-bottom: 55%;
-      background-image: url('https://img.juyun.tv/user/1582878204.jpg'); // img.juyun.tv/user/1582878204.jpg)
-      background-size: 100% 100%;
+      overflow hidden
+      padding-bottom: 55%
+      background-size: 100% 100%
+      img {
+        width: 100%;
+        height 3.8rem /* 190/50 */
+      }
     }
 
     .platform {

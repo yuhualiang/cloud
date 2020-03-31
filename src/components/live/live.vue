@@ -1,15 +1,20 @@
 <template>
-  <div>
-    <sort @clickItem="handleClickItem"></sort>
-    <vedio-list :states="states" :listData="listData"></vedio-list>
+  <div class="live">
+    <scroll ref="scroll" :data="listData" class="content">
+      <div>
+        <sort @clickItem="handleClickItem"></sort>
+        <vedio-list :states="states" :listData="listData"></vedio-list>
+      </div>
+    </scroll>
   </div>
 </template>
 <script>
 import Sort from '../sort/sort'
 import VedioList from '../vedio-list/vedio-list'
+import Scroll from '../../common/scroll/scroll'
 
 export default {
-  components: { Sort, VedioList },
+  components: { Sort, VedioList, Scroll },
   data() {
     return {
       states: 'live',
@@ -19,7 +24,7 @@ export default {
           id: '29362',
           online_number: 51,
           comment: '0',
-          coverpicture: 'http://juxian.juyun.tv/images/videoqg.jpg',
+          coverpicture: 'http://juxian.juyun.tv/images/videoqg555.jpg',
           live: 'live/2020030929362.html',
           live_state: 1,
           state: '等待直播',
@@ -144,4 +149,11 @@ export default {
   }
 }
 </script>
-<style lang="stylus" scoped></style>
+<style lang="stylus" scoped>
+.live {
+  .content {
+    height 100%
+    overflow hidden
+  }
+}
+</style>
