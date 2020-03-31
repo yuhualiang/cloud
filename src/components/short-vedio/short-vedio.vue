@@ -1,15 +1,20 @@
 <template>
-  <div>
-    <sort @clickItem="handleClickItem"></sort>
-    <vedio-list :states="states" :listData="listData"></vedio-list>
+  <div class="short-vedio">
+    <scroll ref="scroll" :data="listData" class="content">
+      <div>
+        <sort @clickItem="handleClickItem"></sort>
+        <vedio-list :states="states" :listData="listData"></vedio-list>
+      </div>
+    </scroll>
   </div>
 </template>
 <script>
 import Sort from '../sort/sort'
 import VedioList from '../vedio-list/vedio-list'
+import Scroll from '../../common/scroll/scroll'
 
 export default {
-  components: { Sort, VedioList },
+  components: { Sort, VedioList, Scroll },
   data() {
     return {
       states: 'short',
@@ -144,4 +149,15 @@ export default {
   }
 }
 </script>
-<style lang="stylus" scoped></style>
+<style lang="stylus" scoped>
+.short-vedio {
+  position: fixed;
+  width: 100%;
+  top: 2.4rem /* 120/50 */
+  bottom: 0;
+  .content {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+</style>

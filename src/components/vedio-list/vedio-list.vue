@@ -16,7 +16,8 @@
             <span>{{item.online_number}}人围观</span>
           </div>
         </div>
-        <div class="graph" v-lazy:background-image="item.coverpicture">
+        <div class="graph">
+          <img v-lazy="item.coverpicture" alt="#">
         </div>
         <div class="platform">{{item.name}}</div>
       </div>
@@ -71,11 +72,11 @@ export default {
     }
 
     .graph {
-      width: 100%;
-      height: 0;
-      overflow hidden
-      padding-bottom: 55%
-      background-size: 100% 100%
+      // width: 100%;
+      // height: 0;
+      // overflow hidden
+      // padding-bottom: 55%
+      // background-size: 100% 100%
       img {
         width: 100%;
         height 3.8rem /* 190/50 */

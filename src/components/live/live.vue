@@ -24,7 +24,7 @@ export default {
           id: '29362',
           online_number: 51,
           comment: '0',
-          coverpicture: 'http://juxian.juyun.tv/images/videoqg555.jpg',
+          coverpicture: 'http://juxian.juyun.tv/images/videoqg.jpg',
           live: 'live/2020030929362.html',
           live_state: 1,
           state: '等待直播',
@@ -151,9 +151,13 @@ export default {
 </script>
 <style lang="stylus" scoped>
 .live {
+  position: fixed;
+  width: 100%;
+  top: 2.4rem /* 120/50 */
+  bottom: 0;
   .content {
-    height 100%
-    overflow hidden
+    height: 100%;
+    overflow: hidden;
   }
 }
 </style>
