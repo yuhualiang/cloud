@@ -29,9 +29,9 @@
   </div>
 </template>
 <script>
-import Sort from '../sort/sort'
-import Scroll from '../../common/scroll/scroll'
-import Loading from '../../common/loading/loading'
+import Sort from 'components/sort/sort'
+import Scroll from 'common/scroll/scroll'
+import Loading from 'common/loading/loading'
 export default {
   components: { Sort, Scroll, Loading },
   data() {
@@ -63,7 +63,7 @@ export default {
   },
   methods: {
     handleClickItem(id) {
-      console.log(id)
+      // console.log(id)
     }
   }
 }

@@ -12,10 +12,10 @@
   </div>
 </template>
 <script>
-import Sort from '../sort/sort'
-import VedioList from '../vedio-list/vedio-list'
-import Scroll from '../../common/scroll/scroll'
-import Loading from '../../common/loading/loading'
+import Sort from 'components/sort/sort'
+import VedioList from 'components/vedio-list/vedio-list'
+import Scroll from 'common/scroll/scroll'
+import Loading from 'common/loading/loading'
 // import axios from 'axios'
 
 export default {
