@@ -32,5 +32,17 @@
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "description": "## Project setup ``` npm install ```",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuhualiang/cloud.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuhualiang/cloud/issues"
+  },
+  "homepage": "https://github.com/yuhualiang/cloud#readme"
 }

@@ -31,10 +31,10 @@ export default {
   },
   methods: {
     handleClickItem(id) {
-      console.log(id)
+      // console.log(id)
     },
     _getDataList() {
-      axios.get('/data.json').then((res) => {
+      axios.get('./data.json').then((res) => {
         this.listData = res.data
       })
     }
